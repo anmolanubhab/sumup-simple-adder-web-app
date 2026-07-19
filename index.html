@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Simple Adder - SumUp - Simple Adder Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Sum<span>Up</span></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Simple, Fast Addition</h1>
+    <p>A clean, focused tool designed to sum up your numbers instantly. No fluff, no signups, just mathematics.</p>
+  </section>
+
+  <div class="card">
+    <div class="form-group">
+      <label for="num1">First Number</label>
+      <input type="number" id="num1" class="form-input" placeholder="e.g. 15" step="any">
+    </div>
+    
+    <div class="form-group">
+      <label for="num2">Second Number</label>
+      <input type="number" id="num2" class="form-input" placeholder="e.g. 27" step="any">
+    </div>
+
+    <button type="button" class="btn" onclick="const n1 = parseFloat(document.getElementById('num1').value) || 0; const n2 = parseFloat(document.getElementById('num2').value) || 0; document.getElementById('sum-result').textContent = (n1 + n2).toLocaleString(undefined, {maximumFractionDigits: 10});">Calculate Sum</button>
+    <button type="button" class="btn btn-secondary" onclick="document.getElementById('num1').value=''; document.getElementById('num2').value=''; document.getElementById('sum-result').textContent='0';">Clear</button>
+
+    <div class="result-container">
+      <div class="result-label">Total Sum</div>
+      <div class="result-value" id="sum-result">0</div>
+    </div>
+  </div>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3 class="feature-title">Instant Calculation</h3>
+      <p class="feature-desc">Computes the final sum in real-time as soon as you trigger the calculate button.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <h3 class="feature-title">Fully Responsive</h3>
+      <p class="feature-desc">Whether you're on a mobile phone, tablet, or desktop, the calculator scales beautifully.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛡️</div>
+      <h3 class="feature-title">Privacy First</h3>
+      <p class="feature-desc">Calculations are processed entirely on your local browser. Your data never leaves your device.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2023 SumUp. Built for clean and modern calculation utility.</p>
+  <div class="footer-links">
+    <a href="index.html">Calculator</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</footer>
+</body>
+</html>
